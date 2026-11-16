@@ -1,0 +1,124 @@
+<!doctype html>
+<html lang="it">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>La mia libreria</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.9/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-yEPZ7jP9S0QKiUQ0m3jjsO4ProIW7wvR9gXkI7JOGa2XVsw53Yke2bsdkBbjmmiX"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.9/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-WyOxWvTyr1QaMPfiPJSv76iReVthorl5uWlFtZPyK0IEB0hGzo9y5Bp9mYanr8Bu"
+      crossorigin="anonymous"
+    ></script>
+    <script type="module" src="assets/js/script.js"></script>
+  </head>
+
+  <body class="bg-light">
+    <!-- HEADER -->
+    <header class="bg-primary text-white text-center p-5">
+      <h1 class="fw-bold">La mia libreria</h1>
+      <p class="mb-0">Aggiungi i tuoi libri e segnalali come letti.</p>
+    </header>
+
+    <!-- CONTENUTO PRINCIPALE -->
+    <main class="container py-4" style="max-width: 928px">
+      <!-- FORM AGGIUNTA LIBRO -->
+      <div class="card shadow-sm mb-4">
+        <div class="card-body p-4">
+          <h3 class="fw-bold mb-4">Aggiungi un libro</h3>
+
+          <form id="bookForm">
+            <!-- TITOLO -->
+            <div class="mb-3">
+              <label for="titolo" class="form-label fw-semibold">
+                Titolo
+              </label>
+
+              <input
+                type="text"
+                class="form-control"
+                id="titolo"
+                name="titolo"
+                required
+              />
+            </div>
+
+            <!-- AUTORE -->
+            <div class="mb-3">
+              <label for="autore" class="form-label fw-semibold">
+                Autore
+              </label>
+
+              <input
+                type="text"
+                class="form-control"
+                id="autore"
+                name="autore"
+                required
+              />
+            </div>
+
+            <!-- ANNO -->
+            <div class="mb-3">
+              <label for="anno" class="form-label fw-semibold"> Anno </label>
+
+              <input
+                type="number"
+                class="form-control"
+                id="anno"
+                name="anno"
+                required
+              />
+            </div>
+
+            <!-- FORMATO -->
+            <div class="mb-3">
+              <label for="formato" class="form-label fw-semibold">
+                Formato
+              </label>
+
+              <select class="form-select" id="formato" name="formato">
+                <option value="cartaceo">Cartaceo</option>
+                <option value="digitale">Digitale</option>
+              </select>
+            </div>
+
+            <!-- CAMPO DIGITALE -->
+
+            <div id="campoDigitale" class="mb-3" hidden>
+              <label for="dimensione" class="form-label">
+                Dimensione (MB)
+              </label>
+
+              <input
+                type="number"
+                class="form-control"
+                id="dimensione"
+                name="dimensione"
+                step="0.1"
+                min="0"
+              />
+            </div>
+
+            <!-- PULSANTE -->
+            <button type="submit" class="btn btn-primary">Aggiungi</button>
+          </form>
+        </div>
+      </div>
+
+      <!-- LISTA LIBRI -->
+      <section>
+        <h3 class="fw-bold mb-3">
+          I tuoi libri (<span id="numeroLibri">0</span>)
+        </h3>
+
+        <ul id="listaLibri" class="list-group"></ul>
+      </section>
+    </main>
+  </body>
+</html>
