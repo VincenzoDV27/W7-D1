@@ -113,10 +113,27 @@
 
       <!-- LISTA LIBRI -->
       <section>
-        <h3 class="fw-bold mb-3">
-          I tuoi libri (<span id="numeroLibri">0</span>)
-        </h3>
+        <div class="d-flex justify-content-between align-items-center mb-3">
+          <h3 class="fw-bold mb-0">
+            I tuoi libri (<span id="numeroLibri">0</span>)
+          </h3>
 
+          <div class="d-flex gap-2">
+            <button id="svuota-tutto" class="btn btn-outline-danger">
+              Svuota tutto
+            </button>
+
+            <button id="esporta" class="btn btn-outline-primary">
+              Esporta JSON
+            </button>
+          </div>
+        </div>
+
+        <div class="d-flex gap-2 mb-3" id="filtriLibri">
+          <button class="btn btn-success">Tutti</button>
+          <button class="btn btn-outline-success">Letti</button>
+          <button class="btn btn-outline-success">Da leggere</button>
+        </div>
         <ul id="listaLibri" class="list-group"></ul>
       </section>
     </main>
