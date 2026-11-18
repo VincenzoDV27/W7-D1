@@ -27,6 +27,27 @@
 
     <!-- CONTENUTO PRINCIPALE -->
     <main class="container py-4" style="max-width: 928px">
+      <!-- RICERCA LIBRI -->
+      <section class="mb-4">
+        <h3 class="fw-bold mb-3">Cerca un libro</h3>
+
+        <div class="mb-3">
+          <label for="cerca" class="form-label">Titolo o autore</label>
+          <input
+            type="text"
+            id="cerca"
+            class="form-control"
+            placeholder="Es. harari, tolkien..."
+          />
+        </div>
+
+        <div id="spinner" hidden>Caricamento in corso...</div>
+
+        <div id="errore" class="alert alert-danger" hidden></div>
+
+        <ul id="risultati" class="list-group"></ul>
+      </section>
+
       <!-- FORM AGGIUNTA LIBRO -->
       <div class="card shadow-sm mb-4">
         <div class="card-body p-4">
